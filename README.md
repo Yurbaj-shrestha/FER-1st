@@ -10,8 +10,7 @@ The emotion recognition model is trained on FER 2013 dataset. It can detect 7 em
 
 - Real time expression detection and song recommendations.
 - Playlists fetched from Spotify using API.
-- Neumorphism UI for website.
-
+  
 # Running the app:
 
 Flask:
@@ -24,8 +23,6 @@ Flask:
 
 - Keras
 - Tensorflow
-- Spotipy
-- Tkinter (For testing)
 - Flask
 
 # Dataset:
@@ -52,16 +49,10 @@ Note:- Tried Implementing various other models like VGG16 but accuracy was far t
 - The images were normalised, resized to (48,48) and converted to grayscale in batches of 64 with help of 'ImageDataGenerator' in Keras API.
 - Training took around 13 hours locally for 75 epochs with an accuracy of ~66 %
 
-# Current condition:
-
-The entire project works perfectly fine. Live detection gives good frame rates due to multithreading.
 
 # Project Components:
 
-- Spotipy is a module for establishing connection to and getting tracks from Spotify using Spotipy wrapper.
 - haarcascade is for face detection.
 - camera.py is the module for video streaming, frame capturing, prediction and recommendation which are passed to main.py.
 - main.py is the main flask application file.
 - index.html in 'templates' directory is the web page for the application. Basic HTML and CSS.
-- utils.py is an utility module for video streaming of web camera with threads to enable real time detection.
-- train.py is the script for image processing and training the model.
