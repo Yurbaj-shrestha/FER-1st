@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1885ed">
+  <title>Bricks.io - Homepage</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/landingpage.css') }}">
+
+</head>
+
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+<body>
+  <header id="header">
+    <div class="logo-section">
+      <img id="header-img" class="site-logo" src="{{ url_for('static', filename='images/icon.webp') }}" alt="company-logo">
+    </div>
+    <nav id="nav-bar" class="navigation-bar">
+      <ul style="list-style:none;" class="navigation">
+        <li><a class="nav-link" href="#main">HOME</a></li>
+        <li><a class="nav-link" href="#story">Our Product</a></li>
+        <li><a class="nav-link" href="#designs">Designs</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li><a class="nav-link" href="{{ url_for('face_feed') }}">Video Feed</a></li>
+        <li><a class="nav-link" href="{{ url_for('login') }}"><button class="login-btn">Login</button> </a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="main" class="cover-sect">
+        <div class="title-text">
+          <h1>FERS</h1>
+          <p>~<span class="highlight">EMOTION</span> DETECTION USING CNN FOR SONG MAPPING~</p>
+        </div>
+        <div class="box-feature">
+         <img class="cover-image" src="{{ url_for('static', filename='images/main.webp') }}" alt="Description of the image"/>
+        </div>
+      </section>
+
+      <!--       ........ -->
+      <section id="story" class="story-sect">
+        <div class="section-text">
+          <h2>Description</h2>
+          <p>This system incorporates computer vision techniques, including Convolutional Neural Networks (CNNs), For identifying emotions such as <span class="highlight" style="text-transform: uppercase;">Neutral, Happy, sad,</span> and <span class="highlight"style="text-transform: uppercase;">angry</span> by focusing on the dynamic changes in facial muscles. The features extracted from the song align with comparable emotions and are used to suggest songs corresponding to the person's current mood. Leveraging a large musical library, the system selects rule-based method that match the identified emotions.</p>
+        </div>
+        <div class="box-feature">
+        <img src="{{ url_for('static', filename='images/E1.webp') }}" />
+        </div>
+      </section>
+
+      <!--       ........ -->
+      <section id="designs" class="samples">
+        <div class="section-text">
+          <h2>Featured</h2>
+          <p>Take a look at some of our featured picks that have made editorial debuts</p>
+        </div>
+        <div class="featured">
+          <div class="cont">
+            <figure>
+              <img src="https://images2.imgbox.com/78/40/AXaX0dGj_o.jpg" alt="modern style living room">
+              <figcaption>
+                <a href="https://pixabay.com/users/jarmoluk-143740/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2094702">Image by Michal Jarmoluk from Pixabay</a>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="cont">
+            <figure>
+              <img src="https://images2.imgbox.com/61/65/spezPzqR_o.jpg" alt="Grey sofa in minimalist living room">
+              <figcaption>
+                <a href="https://pixabay.com/users/StockSnap-894430/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2593570">Image by StockSnap from Pixabay</a>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="cont">
+            <figure>
+              <img src="https://images2.imgbox.com/08/37/9tQMXva6_o.jpg" alt="Living Room Modern Interior">
+              <figcaption>
+                <a href="https://pixabay.com/users/miapirttila-4257077/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1978362">Image by miapirttila from Pixabay</a>
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+        <div class="video-section">
+          <iframe id="video" src="https://player.vimeo.com/video/323262733" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </section>
+
+
+      <!--       ........ -->
+      <section id="contact" class="contact-section">
+        <div class="section-text">
+          <h2>Get in touch</h2>
+          <p>We would love to hear from you! <br><br>If you would like to receive our monthly catalogue subscribe by filling in the form with your name and email address</p>
+        </div>
+        <div class="contact-info">
+          <div class="form-box">
+            <form id="form" class="contact-form" action="https://www.freecodecamp.com/email-submit">
+              <label for="name" class="form-entry">Name <br>
+                <input name="name" id="name" type="text" class="txt-box" placeholder="&nbsp&nbsp;Enter name" required><br>
+              </label>
+              <label for="email" class="form-entry">Email <br>
+                <input name="email" id="email" type="email" class="txt-box" placeholder="&nbsp&nbsp;Enter email" required><br>
+              </label>
+              <label for="message" class="form-entry">Message<br>
+                <textarea name="message" id="message" type="textarea" class="txt-box" placeholder="&nbsp;Optional"></textarea><br>
+              </label><br>
+              <input class="btn" id="submit" type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+  <footer class="footer-section">
+    <div class="footer-info">
+      <ul style="list-style:none;">
+        <li><span>Privacy</span></li>
+        <li><span>Terms</span></li>
+        <li><span>Contact</span></li>
+      </ul>
+    </div>
+    <span class="personal-info">Created by Lulet<br>Reach out on twitter @luizoutlets</span>
+    <span>Copyright 2019</span>
+  </footer>
+
+</body>
+
+</html>
